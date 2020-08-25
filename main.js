@@ -11,7 +11,7 @@ function parse_caltopo_url(url) {
 }
 
 function open_google_maps_in_caltopo(info) {
-  groups = parse_google_maps_url(info.pageUrl)
+  groups = parse_google_maps_url(info.pageUrl);
   url = 'https://caltopo.com/map.html#ll=' + groups.lat + ',' + groups.lng + '&z=' + groups.z;
   chrome.tabs.create({
     url: url
@@ -19,7 +19,7 @@ function open_google_maps_in_caltopo(info) {
 }
 
 function open_google_maps_in_noaa(info) {
-  groups = parse_google_maps_url(info.pageUrl)
+  groups = parse_google_maps_url(info.pageUrl);
   url = 'https://forecast.weather.gov/MapClick.php?lat=' + groups.lat + '&lon=' + groups.lng;
   chrome.tabs.create({
     url: url
@@ -27,7 +27,7 @@ function open_google_maps_in_noaa(info) {
 }
 
 function open_caltopo_in_noaa(info) {
-  groups = parse_caltopo_url(info.pageUrl)
+  groups = parse_caltopo_url(info.pageUrl);
   url = 'https://forecast.weather.gov/MapClick.php?lat=' + groups.lat + '&lon=' + groups.lng;
   chrome.tabs.create({
     url: url
