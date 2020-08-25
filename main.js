@@ -36,19 +36,19 @@ function open_caltopo_in_noaa(info) {
 
 function create_context_menus() {
   chrome.contextMenus.create({
-    title: 'Open CalTopo here',
+    title: 'Open in CalTopo',
     onclick: open_google_maps_in_caltopo,
     documentUrlPatterns: ['https://www.google.com/maps/*'],
     contexts: ["all"]
   });
   chrome.contextMenus.create({
-    title: 'Point forecast here',
+    title: 'Point forecast',
     onclick: open_google_maps_in_noaa,
     documentUrlPatterns: ['https://www.google.com/maps/*'],
     contexts: ["all"]
   });
   chrome.contextMenus.create({
-    title: 'Point forecast here',
+    title: 'Point forecast',
     onclick: open_caltopo_in_noaa,
     documentUrlPatterns: ['https://caltopo.com/*'],
     contexts: ["all"]
