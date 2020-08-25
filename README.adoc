@@ -1,0 +1,12 @@
+# Chrome Mapping Extenion
+
+This Chrome extension adds context menu entries for both Google Maps and CalTopo.
+
+Features for Google Maps:
+
+* Open in CalTopo
+* Point forecast
+
+Features for CalTopo:
+
+* Point forecast
