@@ -34,6 +34,14 @@ function open_caltopo_in_noaa(info) {
   });
 }
 
+function open_caltopo_in_google_maps(info) {
+  groups = parse_caltopo_url(info.pageUrl);
+  url = 'https://www.google.com/maps/@' + groups.lat + ',' + groups.lng + ',' + groups.z + 'z';
+  chrome.tabs.create({
+    url: url
+  });
+}
+
 function create_context_menus() {
   chrome.contextMenus.create({
     title: 'Open in CalTopo',
@@ -50,6 +58,12 @@ function create_context_menus() {
   chrome.contextMenus.create({
     title: 'Point forecast',
     onclick: open_caltopo_in_noaa,
+    documentUrlPatterns: ['https://caltopo.com/*'],
+    contexts: ["all"]
+  });
+  chrome.contextMenus.create({
+    title: 'Open in Google Maps',
+    onclick: open_caltopo_in_google_maps,
     documentUrlPatterns: ['https://caltopo.com/*'],
     contexts: ["all"]
   });

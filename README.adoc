@@ -9,4 +9,5 @@ Features for Google Maps:
 
 Features for CalTopo:
 
+* Open in Google Maps
 * Point forecast
