@@ -1,0 +1,13 @@
+{
+  "name": "Mapping Extensions",
+  "version": "0.1",
+  "description": "Adds context menu options for Google Maps and CalTopo",
+  "background": {
+    "scripts": ["main.js"]
+  },
+  "permissions": [
+    "contextMenus",
+    "tabs"
+  ],
+  "manifest_version": 2
+}
