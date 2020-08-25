@@ -36,7 +36,7 @@ function open_caltopo_in_noaa(info) {
 
 function create_context_menus() {
   chrome.contextMenus.create({
-    title: 'Open Caltopo here',
+    title: 'Open CalTopo here',
     onclick: open_google_maps_in_caltopo,
     documentUrlPatterns: ['https://www.google.com/maps/*'],
     contexts: ["all"]
