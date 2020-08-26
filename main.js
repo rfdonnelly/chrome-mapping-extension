@@ -43,6 +43,7 @@ function open_caltopo_in_google_maps(info) {
 }
 
 function create_context_menus() {
+  // Google Maps
   chrome.contextMenus.create({
     title: 'Open in CalTopo',
     onclick: open_google_maps_in_caltopo,
@@ -55,15 +56,17 @@ function create_context_menus() {
     documentUrlPatterns: ['https://www.google.com/maps/*'],
     contexts: ["all"]
   });
+
+  // CalTopo
   chrome.contextMenus.create({
-    title: 'Point forecast',
-    onclick: open_caltopo_in_noaa,
+    title: 'Open in Google Maps',
+    onclick: open_caltopo_in_google_maps,
     documentUrlPatterns: ['https://caltopo.com/*'],
     contexts: ["all"]
   });
   chrome.contextMenus.create({
-    title: 'Open in Google Maps',
-    onclick: open_caltopo_in_google_maps,
+    title: 'Point forecast',
+    onclick: open_caltopo_in_noaa,
     documentUrlPatterns: ['https://caltopo.com/*'],
     contexts: ["all"]
   });
