@@ -11,3 +11,5 @@ Features for CalTopo:
 
 * Open in Google Maps
 * Point forecast
+
+Requires context menus to be enabled with something like link:https://chrome.google.com/webstore/detail/enable-right-click/bofdamlbkfkjnecfjbhpncokfalmmbii[Enable Right Click].
