@@ -7,7 +7,9 @@
   },
   "permissions": [
     "contextMenus",
-    "tabs"
+    "tabs",
+    // For injecting map control script
+    "https://www.mountainproject.com/maps"
   ],
   "manifest_version": 2
 }

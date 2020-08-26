@@ -26,6 +26,18 @@ function open_google_maps_in_noaa(info) {
   });
 }
 
+function open_google_maps_in_mountain_project(info) {
+  groups = parse_google_maps_url(info.pageUrl);
+  url = 'https://www.mountainproject.com/map'
+  chrome.tabs.create({
+    url: url
+  }, function(tab) {
+    chrome.tabs.executeScript(tab.id, {file: 'mountain_project_map_control.js'}, function() {
+      chrome.tabs.sendMessage(tab.id, groups);
+    });
+  });
+}
+
 function open_caltopo_in_noaa(info) {
   groups = parse_caltopo_url(info.pageUrl);
   url = 'https://forecast.weather.gov/MapClick.php?lat=' + groups.lat + '&lon=' + groups.lng;
@@ -42,11 +54,29 @@ function open_caltopo_in_google_maps(info) {
   });
 }
 
+function open_caltopo_in_mountain_project(info) {
+  groups = parse_caltopo_url(info.pageUrl);
+  url = 'https://www.mountainproject.com/map'
+  chrome.tabs.create({
+    url: url
+  }, function(tab) {
+    chrome.tabs.executeScript(tab.id, {file: 'mountain_project_map_control.js'}, function() {
+      chrome.tabs.sendMessage(tab.id, groups);
+    });
+  });
+}
+
 function create_context_menus() {
   // Google Maps
   chrome.contextMenus.create({
     title: 'Open in CalTopo',
     onclick: open_google_maps_in_caltopo,
+    documentUrlPatterns: ['https://www.google.com/maps/*'],
+    contexts: ["all"]
+  });
+  chrome.contextMenus.create({
+    title: 'Open in Mountain Project',
+    onclick: open_google_maps_in_mountain_project,
     documentUrlPatterns: ['https://www.google.com/maps/*'],
     contexts: ["all"]
   });
@@ -61,6 +91,12 @@ function create_context_menus() {
   chrome.contextMenus.create({
     title: 'Open in Google Maps',
     onclick: open_caltopo_in_google_maps,
+    documentUrlPatterns: ['https://caltopo.com/*'],
+    contexts: ["all"]
+  });
+  chrome.contextMenus.create({
+    title: 'Open in Mountain Project',
+    onclick: open_caltopo_in_mountain_project,
     documentUrlPatterns: ['https://caltopo.com/*'],
     contexts: ["all"]
   });
