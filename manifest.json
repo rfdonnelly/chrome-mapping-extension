@@ -5,6 +5,15 @@
   "background": {
     "scripts": ["main.js"]
   },
+  "content_scripts": [
+    {
+      "matches": ["https://caltopo.com/*"],
+      "js": ["caltopo_menu_loader.js"]
+    }
+  ],
+  "web_accessible_resources": [
+    "caltopo_menu.js"
+  ],
   "permissions": [
     "contextMenus",
     "tabs",
