@@ -15,7 +15,7 @@ This Chrome extension adds context menu shortcuts to open various location-based
 * Open in Google Maps
 * Open in Mountain Project
 
-== Demo
+== Demos
 
 === NOAA Forecast
 
