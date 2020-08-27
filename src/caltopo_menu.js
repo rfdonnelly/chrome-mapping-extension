@@ -1,4 +1,4 @@
-const extensionid = "iegpfflhnjhfjnaodbcbjconddlcifei";
+const extensionid = "knpipblmbfceoogibpediijlfijgbgfe";
 
 function open(id, point) {
   point = GeoUtil.fromWGS84(point);
