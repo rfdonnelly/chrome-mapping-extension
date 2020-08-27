@@ -12,3 +12,5 @@ Features for CalTopo:
 
 * Open in Google Maps
 * Open in Mountain Project
+
+image::demo.gif[]
