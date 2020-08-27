@@ -1,16 +1,20 @@
-# Chrome Mapping Extension
+= Chrome Mapping Extension
 
-This Chrome extension adds context menu entries for both Google Maps and CalTopo.
+This Chrome extension adds context menu shortcuts to open various location-based sites from Google Maps and CalTopo.
 
-Features for Google Maps:
+== Features
+
+=== For Google Maps
 
 * Open in CalTopo
 * Open in Mountain Project
 * NOAA forecast
 
-Features for CalTopo:
+=== For CalTopo
 
 * Open in Google Maps
 * Open in Mountain Project
+
+== Demo
 
 image::demo.gif[]
