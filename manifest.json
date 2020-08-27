@@ -21,8 +21,10 @@
   ],
   "externally_connectable": {
     // So that caltopo_menu (page script) can talk to the extension
-    "matches": ["https://caltopo.com/*"],
-    "matches": ["https://www.google.com/maps/*"]
+    "matches": [
+        "https://caltopo.com/*",
+        "https://www.google.com/maps/*"
+    ]
   },
   "permissions": [
     "contextMenus",
