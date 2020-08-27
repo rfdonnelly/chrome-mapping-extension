@@ -13,7 +13,7 @@ const extensionid = "lbabhpmjdampfhajpjkefkkocjokcedc";
 
 function parse_google_maps_url(url) {
   return url
-    .match(/@(?<lat>.*),(?<lon>.*),(?<zoom>\d+)z/)
+    .match(/@(?<lat>.*),(?<lon>.*),(?<zoom>.*)z/)
     .groups;
 }
 
