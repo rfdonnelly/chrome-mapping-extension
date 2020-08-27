@@ -12,8 +12,13 @@
     }
   ],
   "web_accessible_resources": [
+    // So that we can inject code into the page
     "caltopo_menu.js"
   ],
+  "externally_connectable": {
+    // So that caltopo_menu (page script) can talk to the extension
+    "matches": ["https://caltopo.com/*"]
+  },
   "permissions": [
     "contextMenus",
     "tabs",

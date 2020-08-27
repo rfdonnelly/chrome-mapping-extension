@@ -1,13 +1,22 @@
-function open_in_google_maps(point) {
+var extensionid = "lbabhpmjdampfhajpjkefkkocjokcedc";
+
+function open(id, point) {
   point = GeoUtil.fromWGS84(point);
   zoom = org.sarsoft.MapState.views["Tools"].imap.map.getZoom();
-  url = 'https://www.google.com/maps/@' + point[GeoUtil.LAT] + ',' + point[GeoUtil.LON] + ',' + zoom + 'z';
-  window.open(url, "_blank");
+  chrome.runtime.sendMessage(extensionid, {
+    id: id,
+    lat: point[GeoUtil.LAT],
+    lon: point[GeoUtil.LON],
+    zoom: zoom
+  });
 }
 
 function onload() {
   org.sarsoft.MapState.views["Tools"].imap.addContextMenuCallback(function (coordinates) {
-    return [{text: "Open in Google Maps", handler: function (data) {open_in_google_maps(coordinates)}}];
+    return [
+      {text: "Open in Google Maps", handler: function (data) {open('google_maps', coordinates)}},
+      {text: "Open in Mountain Project", handler: function (data) {open('mountain_project', coordinates)}}
+    ];
   });
 }
 

@@ -38,30 +38,20 @@ function open_google_maps_in_mountain_project(info) {
   });
 }
 
-function open_caltopo_in_noaa(info) {
-  groups = parse_caltopo_url(info.pageUrl);
-  url = 'https://forecast.weather.gov/MapClick.php?lat=' + groups.lat + '&lon=' + groups.lon;
+function open_google_maps(view) {
+  url = 'https://www.google.com/maps/@' + view.lat + ',' + view.lon + ',' + view.zoom + 'z';
   chrome.tabs.create({
     url: url
   });
 }
 
-function open_caltopo_in_google_maps(info) {
-  groups = parse_caltopo_url(info.pageUrl);
-  url = 'https://www.google.com/maps/@' + groups.lat + ',' + groups.lon + ',' + groups.zoom + 'z';
-  chrome.tabs.create({
-    url: url
-  });
-}
-
-function open_caltopo_in_mountain_project(info) {
-  groups = parse_caltopo_url(info.pageUrl);
+function open_mountain_project(view) {
   url = 'https://www.mountainproject.com/map'
   chrome.tabs.create({
     url: url
   }, function(tab) {
     chrome.tabs.executeScript(tab.id, {file: 'mountain_project_map_control.js'}, function() {
-      chrome.tabs.sendMessage(tab.id, groups);
+      chrome.tabs.sendMessage(tab.id, view);
     });
   });
 }
@@ -86,28 +76,18 @@ function create_context_menus() {
     documentUrlPatterns: ['https://www.google.com/maps/*'],
     contexts: ["all"]
   });
-
-  // CalTopo
-  chrome.contextMenus.create({
-    title: 'Open in Google Maps',
-    onclick: open_caltopo_in_google_maps,
-    documentUrlPatterns: ['https://caltopo.com/*'],
-    contexts: ["all"]
-  });
-  chrome.contextMenus.create({
-    title: 'Open in Mountain Project',
-    onclick: open_caltopo_in_mountain_project,
-    documentUrlPatterns: ['https://caltopo.com/*'],
-    contexts: ["all"]
-  });
-  chrome.contextMenus.create({
-    title: 'Point forecast',
-    onclick: open_caltopo_in_noaa,
-    documentUrlPatterns: ['https://caltopo.com/*'],
-    contexts: ["all"]
-  });
 }
 
 chrome.runtime.onInstalled.addListener(function() {
   create_context_menus();
 });
+
+chrome.runtime.onMessageExternal.addListener(
+  function(request, sender, sendResponse) {
+    if (request.id == 'google_maps') {
+      open_google_maps(request);
+    }
+    if (request.id == 'mountain_project') {
+      open_mountain_project(request);
+    }
+  });
