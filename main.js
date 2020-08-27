@@ -84,10 +84,12 @@ chrome.runtime.onInstalled.addListener(function() {
 
 chrome.runtime.onMessageExternal.addListener(
   function(request, sender, sendResponse) {
-    if (request.id == 'google_maps') {
-      open_google_maps(request);
-    }
-    if (request.id == 'mountain_project') {
-      open_mountain_project(request);
+    switch (request.id) {
+      case "google_maps":
+        open_google_maps(request);
+        break;
+      case 'mountain_project':
+        open_mountain_project(request);
+        break;
     }
   });
