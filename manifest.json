@@ -9,15 +9,20 @@
     {
       "matches": ["https://caltopo.com/*"],
       "js": ["caltopo_menu_loader.js"]
+    }, {
+      "matches": ["https://www.google.com/maps/*"],
+      "js": ["google_maps_menu_loader.js"]
     }
   ],
   "web_accessible_resources": [
     // So that we can inject code into the page
-    "caltopo_menu.js"
+    "caltopo_menu.js",
+    "google_maps_menu.js"
   ],
   "externally_connectable": {
     // So that caltopo_menu (page script) can talk to the extension
-    "matches": ["https://caltopo.com/*"]
+    "matches": ["https://caltopo.com/*"],
+    "matches": ["https://www.google.com/maps/*"]
   },
   "permissions": [
     "contextMenus",

@@ -1,4 +1,4 @@
-# Chrome Mapping Extenion
+# Chrome Mapping Extension
 
 This Chrome extension adds context menu entries for both Google Maps and CalTopo.
 
@@ -6,11 +6,9 @@ Features for Google Maps:
 
 * Open in CalTopo
 * Open in Mountain Project
-* Point forecast
+* NOAA forecast
 
 Features for CalTopo:
 
 * Open in Google Maps
 * Open in Mountain Project
-
-Requires context menus to be enabled (for Google Maps) with something like link:https://chrome.google.com/webstore/detail/enable-right-click/bofdamlbkfkjnecfjbhpncokfalmmbii[Enable Right Click].
