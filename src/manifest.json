@@ -1,7 +1,7 @@
 {
   "name": "Mapping Extensions",
-  "version": "0.1",
-  "description": "Adds context menu options for Google Maps and CalTopo",
+  "version": "1.0",
+  "description": "Adds context menu shortcuts to open various location-based sites from Google Maps and CalTopo.",
   "background": {
     "scripts": ["main.js"]
   },
