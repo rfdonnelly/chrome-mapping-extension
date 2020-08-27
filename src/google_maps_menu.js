@@ -9,7 +9,7 @@
 // query select with the previously mentioned CSS selector.  If
 // it returns nodes, then we add the menu items.
 
-const extensionid = "lbabhpmjdampfhajpjkefkkocjokcedc";
+const extensionid = "iegpfflhnjhfjnaodbcbjconddlcifei";
 
 function parse_google_maps_url(url) {
   return url
