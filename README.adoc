@@ -17,4 +17,10 @@ This Chrome extension adds context menu shortcuts to open various location-based
 
 == Demo
 
-image::demo.gif[]
+=== NOAA Forecast
+
+image::demo-noaa.gif[]
+
+=== Open in Mountain Project
+
+image::demo-mountain-project.gif[]
