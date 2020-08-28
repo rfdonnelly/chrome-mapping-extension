@@ -12,9 +12,18 @@
 const extensionid = "knpipblmbfceoogibpediijlfijgbgfe";
 
 function parse_google_maps_url(url) {
-  return url
-    .match(/@(?<lat>.*),(?<lon>.*),(?<zoom>.*)z/)
-    .groups;
+  var match = url.match(/@(?<lat>.*),(?<lon>.*),(?<zoom>[\d\.]+)z/)
+  if (match) {
+    return match.groups;
+  }
+  var match = url.match(/@(?<lat>.*),(?<lon>.*),(?<elev>[\d\.]+)m/)
+  if (match) {
+    return match.groups;
+  }
+}
+
+function elevation_to_zoom(elev) {
+  return -1.432 * Math.log(elev) + 27.279
 }
 
 function add_menuitems() {
@@ -30,6 +39,9 @@ function add_menuitems() {
   for (const menuitem of menuitems) {
     add_menuitem(reference, menuitem.text, function() {
       var view = parse_google_maps_url(window.location.href);
+      if ('elev' in view) {
+        view.zoom = elevation_to_zoom(view.elev);
+      }
       chrome.runtime.sendMessage(extensionid, {
         id: menuitem.id,
         lat: view.lat,
