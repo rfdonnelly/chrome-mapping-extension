@@ -1,0 +1,16 @@
+= Development Notes
+
+== Release
+
+To release to the Chrome Web Store:
+
+. Remove the `key` field from `manifest.json`
+. Remove comments from `manifest.json`
+. Zip the `src` directory
++
+----
+cd src
+zip -r chrome-mapping-extension-v${version}.zip *.js*
+----
+. Goto the https://chrome.google.com/webstore/developer/dashboard[Chrome Web Store Developer Dashboard]
+. Goto the extension page and upload a new package then submit for review

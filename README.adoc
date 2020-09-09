@@ -17,16 +17,7 @@ This Chrome extension adds context menu shortcuts to open various location-based
 
 == Install
 
-This extension will be available via the Chrome Web Store pending review.
-Until then, it can be installed manually.
-
-. Download the `chrome-mapping-extension-*.zip` from the https://github.com/rfdonnelly/chrome-mapping-extension/releases/latest[latest release].
-. Extract the archive.
-. Open the Extension Management page by navigating to `chrome://extensions`.
-. Enable Developer Mode by clicking the toggle switch next to *Developer mode*.
-. Click the *LOAD UNPACKED* button and select the extracted directory created in step 2.
-+
-image::https://developer.chrome.com/static/images/get_started/load_extension.png[]
+Install via the https://chrome.google.com/webstore/detail/mapping-extensions/maeojijfkkhoinnffgfobihlgfcllfoj[Mapping Extensions] page on the Chrome Web Store.
 
 == Demos
 
