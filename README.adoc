@@ -1,5 +1,7 @@
 = Chrome Mapping Extension
 
+image::https://img.shields.io/chrome-web-store/v/maeojijfkkhoinnffgfobihlgfcllfoj.svg[link=https://chrome.google.com/webstore/detail/mapping-extensions/maeojijfkkhoinnffgfobihlgfcllfoj]
+
 This Chrome extension adds context menu shortcuts to open various location-based sites from Google Maps and CalTopo.
 
 == Features
