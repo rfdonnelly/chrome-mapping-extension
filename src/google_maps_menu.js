@@ -9,7 +9,7 @@
 // query select with the previously mentioned CSS selector.  If
 // it returns nodes, then we add the menu items.
 
-const extensionid = "knpipblmbfceoogibpediijlfijgbgfe";
+const extensionid = "maeojijfkkhoinnffgfobihlgfcllfoj";
 
 function parse_google_maps_url(url) {
   var match = url.match(/@(?<lat>.*),(?<lon>.*),(?<zoom>[\d\.]+)z/)

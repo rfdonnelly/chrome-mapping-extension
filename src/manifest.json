@@ -1,8 +1,8 @@
 {
   "name": "Mapping Extensions",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "Adds context menu shortcuts to open various location-based sites from Google Maps and CalTopo.",
-  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAk7XG2NcuRJZ4x5MbavDovAdc/F+jqq+UwYHryMP0RFj0ZN04c4aQHBn10806v60pXwr6GfWbFCm2kMhXncPOe+VX7h7iC44k89fog8ntlEW/pO9nhOVjLGK78eD1C5dQxKqeGfdXMW9quWlnMC3oa9fYZomNRvhrZA9uLwSQ4V/btROCMJTzho0flrsf1K1A4VjZ/pOVF8ulVoOwIo3OByErsq6guHVuafuINunb3sMcYYp209L2OdYU4inx87H/EFEYtNp1jZNrOgFbIP4W6lIXGh9mkRpFAxt54nByeonAsVqthmJfD0KesNsopUSmnx9dTmP55UvwUT6l+U9MLQIDAQAB",
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAjSNLdzZ+/wbxzPtayrZbjwoh5VC/vTc0HyImVud7AYpnETwi/Pe9dQuSF1W/rZTVNhlv3scAr5dbWVwz8SP1Lps1KmwzRkie6vkXSjygKkEP7xYzdXJldCxpBS/URJ0OGHmbrHkMwnj1RaqXFZeEgtQk6qORaMtPzOWEvtliykLfeFagl5JtSVILNvvN7ZHs7leAihvhB6fWTHBXYD+zAyY2FJIOXw2YNP9HsoN5NW89QdoJ8DlOr/o+aDsN1seMNDPA1BmF3nqsJb/38UFuakWmWNhcs/VWlSnRdaq6BOcoO5YXK43nB+bx85WlAZ3UT7FSLt08e+YsjlwoEKj2bwIDAQAB",
   "background": {
     "scripts": ["main.js"]
   },
