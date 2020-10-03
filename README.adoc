@@ -11,11 +11,13 @@ This Chrome extension adds context menu shortcuts to open various location-based
 * Open in CalTopo
 * Open in Mountain Project
 * NOAA forecast
+* Strava Heatmap
 
 === For CalTopo
 
 * Open in Google Maps
 * Open in Mountain Project
+* Strava Heatmap
 
 == Install
 
