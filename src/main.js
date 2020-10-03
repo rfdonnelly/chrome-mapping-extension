@@ -30,6 +30,13 @@ function open_noaa(view) {
   });
 }
 
+function open_strava(view) {
+  url = 'https://www.strava.com/heatmap#' + view.zoom + '/' + view.lon + '/' + view.lat + '/hot/all'
+  chrome.tabs.create({
+    url: url
+  });
+}
+
 chrome.runtime.onMessageExternal.addListener(
   function(request, sender, sendResponse) {
     switch (request.id) {
@@ -44,6 +51,9 @@ chrome.runtime.onMessageExternal.addListener(
         break;
       case 'noaa':
         open_noaa(request);
+        break;
+      case 'strava':
+        open_strava(request);
         break;
     }
   });

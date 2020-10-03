@@ -33,7 +33,8 @@ function add_menuitems() {
   var menuitems = [
     {id: 'caltopo', text: "Open in CalTopo"},
     {id: 'mountain_project', text: "Open in Mountain Project"},
-    {id: 'noaa', text: "NOAA Forecast"}
+    {id: 'noaa', text: "NOAA Forecast"},
+    {id: 'strava', text: "Strava Heatmap"},
   ];
 
   for (const menuitem of menuitems) {

@@ -15,7 +15,8 @@ function onload() {
   org.sarsoft.MapState.views["Tools"].imap.addContextMenuCallback(function (coordinates) {
     return [
       {text: "Open in Google Maps", handler: function (data) {open('google_maps', coordinates)}},
-      {text: "Open in Mountain Project", handler: function (data) {open('mountain_project', coordinates)}}
+      {text: "Open in Mountain Project", handler: function (data) {open('mountain_project', coordinates)}},
+      {text: "Strava Heatmap", handler: function (data) {open('strava', coordinates)}}
     ];
   });
 }
